@@ -103,4 +103,18 @@ void checkWinner(){
 		printf("player %d ganhou\n", board[0][2]);
 		runGame = false;
 	}
+	//check draw
+	bool draw = true;
+	for(int i = 0; i < height; i++){
+		for(int j = 0; j < width; j++){
+			if(board[i][j] == 0){
+				draw = false;
+			}
+		}
+	}
+
+	if(draw){
+		printf("Tivemos um empate\n");
+		runGame = false;
+	}
 }
