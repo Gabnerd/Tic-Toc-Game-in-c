@@ -1,6 +1,10 @@
 #include "game.h"
 	
 int main(){
-	loop();
+	while(runGame){
+		renderBoard();
+		input();
+		checkWinner();
+	}
 	return 0;
 }
